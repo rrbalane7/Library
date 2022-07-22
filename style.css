@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.header{
+    height: 4.5em;
+    background-color: #275784;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4.5em;
+    align-items: center;
+}
+
+.title-cont,
+.addbtn-cont{
+    display: flex;
+    align-items: baseline;
+}
+
+.title-cont h1{
+    margin-right: 1em;
+    font-size: 2rem;
+}
+
+.title-cont p,
+.addbtn-cont label{
+    font-size: 1.2rem;
+}
+
+.addbtn-cont label{
+    margin-right: 1em;
+}
+
+#add-btn:hover,
+.addbtn-cont label:hover{
+    cursor: pointer;
+}
+
+.main{
+    background-color: #B4B4B4;
+
+    min-height: 54em;
+    padding: 2em 0 0 0;
+}
+
+.library-cont{
+    background-color: #CDAA7D;
+    height: 48.75em;
+    margin: 0em 2em;
+    padding-left: 1em;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(226px,15%));
+    grid-auto-rows: 14.5em;
+    gap: 1.5em;
+}
+
+.book{
+    background-color: #D9D9D9 ;
+    padding: 1em 1em;
+}
+
+.book > *{
+    margin-bottom: 0.5em;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3em;
+}
+
+.buttons > *{
+    margin-left: 1em;
+    background-color: #D9D9D9;
+    border-style: none;
+}
+
+.buttons > button{
+    cursor: pointer;
+}
+
+.buttons > button:hover{
+    transform: scale(1.15);
+}
+
+
+footer{
+    text-align: center;
+    position: relative;
+    top:1.5em;
+    font-size: 1.2rem;
+}
+
+
+form{
+    position: absolute;
+    top:25%;
+    left:39%;
+    display: none;
+    background-color:rgb(27, 57, 84);
+    border-radius: 10px;
+}
+
+.form-cont{
+    display: flex;
+    flex-direction: column;
+    width:27rem;
+    height: 27rem;
+    color:#fff;
+    padding: 1em 2em;
+}
+
+.form-header{
+    margin-bottom: 1em;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+input[type="text"]{
+    height: 2.5em;
+    padding:1em 0.7em;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+label[for="title"],
+label[for="author"]{
+    margin-bottom: 0.3em;
+    margin-left: 0.2em;
+}
+
+.grid-cont{
+    display:grid;
+    grid-template-columns: 100px 1fr;
+    row-gap: 0.5em;
+    column-gap: 2em;
+}
+
+input[type="number"]{
+
+    font-size: 1rem;
+    padding: 0.1em 0.1em;
+}
+
+button[type="submit"]{
+    width: 8em;
+    height: 2em;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #00FF85;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.close-btn-cont{
+    text-align: end;
+    padding: 5px 20px;
+}
+
+#close-btn{
+    width:50px;
+    font-size: 1.2em;
+    background-color: rgb(27, 57, 84);
+    color: #FFF;
+    border-style: none;    
+}
+
+#close-btn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.541);
+}
+
+/*  Update pop up */
+
+.update-cont{
+    display:none;
+    position: absolute;
+    top:30%;
+    left:44%;
+    flex-direction: column;
+    height: 10em;
+    width:16em;
+    background-color: #275784;
+    color: #FFF;
+    border-radius: 10px;
+}
+
+.update-cont label,
+.update-cont select{
+    margin: 0.5em auto 0.5em auto;
+    font-size: 1rem;
+}
+
+.update-cont > button{
+    width:4em;
+    font-size: 1em;
+    margin: 1.5em auto 0 auto;
+}
+#update{
+    width:10em;
+}
+
+#close-btn2{
+    font-size: 1.2em;
+    width:1em;
+    background-color: #275784;
+    color: #FFF;
+    border-style: none; 
+
+}
+
+#close-btn2:hover{
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.541);
+}
+
+/* BREAKPOINTS */
+
+@media (max-width:1200px){
+    .addbtn-cont > label {
+        display: none;
+    }
+
+    form{
+        left:29%;
+    }
+
+}
+
+@media (max-width:640px){
+    .title-cont{
+        flex-direction: column;
+    }
+
+    .header{
+        padding:0 2em;
+    }
+
+    form{
+        left:8%;
+    }
+
+    .update-cont{
+        left:30%
+    }
+
+    .book{
+        padding: 0.5em 0.5em;
+        font-size: 12px;
+    }
+    
+    .book > *{
+        margin-bottom: 0.3em;
+    }
+    
+    .buttons{
+        margin-top: 0em;
+    }
+    
+    .buttons > *{
+        margin-left: 0.2em;
+        background-color: #D9D9D9;
+        border-style: none;
+    }
+
+    .library-cont{
+        grid-auto-rows: 8.5em;
+
+    }
+
+}
+

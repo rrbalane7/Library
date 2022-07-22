@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="header screen">
+        <div class="title-cont">
+            <h1>vLib'</h1>
+            <p>Your virtual library book logs</p>
+        </div>
+        <div class="addbtn-cont">
+            <label for="add-btn">Add books to the library</label>
+            <button type="button" id="add-btn">
+                <img src="./Assets/plus-regular-36.png" alt="addbtn">
+            </button>
+        </div>
+    </div>
+    <div class="main screen">
+        <div class="library-cont"></div>
+        <footer>
+            <p>&copy RRB 2022 The Odin Project</p>
+        </footer>
+    <div>
+    <form id="my-form">
+        <div class="close-btn-cont">
+            <button type="button" id="close-btn">X</button>
+        </div>
+        <div class="form-cont">
+            <div class="form-header">
+                <h3>Add a book</h3>
+            </div>
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required>
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" required>
+            <div class="grid-cont">
+                <label for="numPage">No. of Pages</label>
+                <label for="read">Did you already read this?</label>
+                <input type="number" name="numPage" id="numPage">  
+                <select name="read" id="read">
+                    <option value="Read">Yes</option>
+                    <option value="Not Read" selected>Not yet</option>
+                    <option value="Currently Reading">Im currently reading this</option>
+                </select>
+            </div>
+            <button type="submit">Add now</button>                
+        </div>
+    </form>
+    <div class="update-cont">
+        <div class="close-btn-cont">
+            <button type="button" id="close-btn2">X</button>
+        </div>
+        <label class="label-update" for="update">Update Status:</label>
+        <select name="update" id="update" required>
+            <option value="Read">Read</option>
+            <option value="Not Read"> Not Read</option>
+            <option value="Currently Reading">Currently Reading</option>
+        </select>
+        <button class="okay-btn" type="button">OK</button>
+    </div>
+</body>
+</html>
